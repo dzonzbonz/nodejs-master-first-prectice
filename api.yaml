@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  description: "NodeJS Master class API #1"
+host: "localhost:3000"
+basepath: "/"
+schemes:
+- "http"
+paths:
+  /hello:
+    get:
+      tags: 
+      - "hello"
+      summary: "View a hello response"
+      description: ""
+      operationId: "getHello"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: "#/definitions/hello"
+definitions:
+  sample:
+    type: "object"
+    properties: 
+      name:
+        type: "string"
